@@ -59,7 +59,7 @@ meu_celular.tirar_foto()  # Saída: "Foto tirada!"
 
 ```
 
-# Uso do - no Pytho
+# Uso do "_" no Pytho
 
 ### ✅ **1. `_variavel` (underscore no início)**
 - **Indica que o atributo ou método é "protegido"**.
