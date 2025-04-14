@@ -228,6 +228,62 @@ class Exemplo:
     def criar(cls):
         return cls()
 ```
+Boa! O uso do `__main__` é uma daquelas coisas simples **mas super poderosas** em Python, especialmente pra **organizar melhor o código**, criar **scripts reutilizáveis** e evitar bugs. Bora entender 👇
+
+---
+
+## 🧠 O que é `__main__`?
+
+Quando você roda um arquivo `.py`, o Python define uma variável especial chamada `__name__`.  
+- Se o arquivo estiver sendo **executado diretamente**, `__name__ == "__main__"`.
+- Se o arquivo for **importado como módulo**, `__name__` vai valer o **nome do arquivo**, e **não será `"__main__"`**.
+
+---
+
+## ✅ Exemplo prático:
+
+```python
+# arquivo: meu_script.py
+
+def saudacao():
+    print("Olá!")
+
+if __name__ == "__main__":
+    saudacao()
+```
+
+### Resultado:
+- Se você rodar no terminal: `python meu_script.py`  
+  → Saída: `Olá!`
+
+- Se importar esse arquivo num outro script:
+```python
+import meu_script
+```
+→ **Nada acontece!** (a função só é chamada se você quiser)
+
+---
+
+## 🤔 Por que usar isso?
+
+1. **Evita que código seja executado quando o módulo for importado.**
+2. **Permite reaproveitar funções e classes sem efeitos colaterais.**
+3. É o que dá ao Python aquela flexibilidade de "isso pode ser script ou biblioteca".
+
+---
+
+## 🔁 Analogia simples
+
+Pensa assim:
+
+```python
+if __name__ == "__main__":  # "Sou o principal que está sendo rodado?"
+```
+
+Se sim → "Pode executar tudo que está aqui dentro".  
+Se não → "Fica quietinho aí, só me usa se quiser importar!"
+
+---
 
 - `@staticmethod`: não usa `self` nem `cls` — é só uma função dentro da classe.
 - `@classmethod`: recebe `cls` em vez de `self` — útil para **fábricas de objetos**.
