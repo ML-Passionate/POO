@@ -1,4 +1,4 @@
-# Quais são os 4 pilares da Programação Orientada a Objetos?
+# Quais são os 4 pilares da Programação Orientada a Objetos? (POO)
 
 A Programação Orientada a Objetos é como um jogo de Lego: você constrói sistemas complexos a partir de peças menores e organizadas. 
 
